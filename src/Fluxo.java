@@ -8,6 +8,8 @@ public class Fluxo {
             e.getStackTrace();
         }catch (NullPointerException e) {
             System.out.println("a variável está nula verifique seu código " + e.getMessage());
+        }catch (MinhaExcecao e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -19,7 +21,7 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        throw  new ArithmeticException("algum número está dando erro"); //instanciando um erro
+        throw new MinhaExcecao("algum número está dando erro"); //instanciando um erro
 //        System.out.println("Fim do metodo2");
     }
 }
